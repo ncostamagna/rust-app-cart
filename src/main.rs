@@ -14,7 +14,7 @@ fn rocket() -> _ {
 use std::process::ExitCode;
 mod logger;
 mod router;
-mod cart;
+mod domain;
 
 #[rocket::main]
 async fn main() -> ExitCode {

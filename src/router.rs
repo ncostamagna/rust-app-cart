@@ -2,15 +2,15 @@
 Rocket app configuration.
 */
 
-use crate::cart;
+use crate::domain;
 use rocket::Build;
 
 
 pub fn init() -> rocket::Rocket<Build> {
-    cart::controller::hijodeputa();
+    domain::controller::hijodeputa();
     rocket::build().mount(
             "/carts",
-            rocket::routes![cart::controller::get],
+            rocket::routes![domain::controller::get],
         )
 }
 
